@@ -121,7 +121,7 @@ public class Formulario extends javax.swing.JFrame {
             }
             
         }catch(Exception e){
-            
+            JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }//GEN-LAST:event_jBRegistrarActionPerformed
 
