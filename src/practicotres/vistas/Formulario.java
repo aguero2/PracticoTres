@@ -103,25 +103,26 @@ public class Formulario extends javax.swing.JFrame {
 
     private void jBRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRegistrarActionPerformed
         // TODO add your handling code here:
-        
-        
-        try{
+
+        try {
             String mail = jTFMail.getText().toLowerCase();
-            int passw = Integer.parseInt( new String(jPFPass.getPassword()));
-            
-            if (mail.equals("alumno@ulp.edu.ar") && passw == 12345678 ) {
-                JOptionPane.showMessageDialog(this, "Bienvenido" );
+            int passw = Integer.parseInt(new String(jPFPass.getPassword()));
+
+            if (mail.equals("alumno@ulp.edu.ar") && passw == 12345678) {
+                JOptionPane.showMessageDialog(this, "Bienvenido");
                 jTFMail.setText("");
                 jPFPass.setText("");
-                
+
             } else {
-                JOptionPane.showMessageDialog(this, "Usuario y/ocontraseña incorrectos" );
+                JOptionPane.showMessageDialog(this, "Usuario y/ocontraseña incorrectos");
                 jTFMail.setText("");
                 jPFPass.setText("");
             }
-            
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(this, e.getMessage());
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Intente nuevamente");
+            jTFMail.setText("");
+            jPFPass.setText("");
         }
     }//GEN-LAST:event_jBRegistrarActionPerformed
 
